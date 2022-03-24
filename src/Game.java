@@ -63,7 +63,7 @@ public class Game {
     }
 
     public synchronized void checkRoundWinner() {
-        if (this.player1 == "Rock" && this.player2 == "Rock"){
+        if (this.player1 == this.player2){
             System.out.println("DRAW");
             this.pointsPlayer2++;
             this.pointsPlayer1++;
@@ -73,19 +73,11 @@ public class Game {
         }else if (this.player1 == "Rock" && this.player2 == "Seasor") {
             System.out.println("PLAYER 1 WON");
             this.pointsPlayer1++;
-        }else if (this.player1 == "Paper" && this.player2 == "Paper"){
-            System.out.println("DRAW");
-            this.pointsPlayer2++;
-            this.pointsPlayer1++;
         }else if (this.player1 == "Paper" && this.player2 == "Seasor"){
             System.out.println("PLAYER 2 WON");
             this.pointsPlayer2++;
         }else if (this.player1 == "Paper" && this.player2 == "Rock") {
             System.out.println("PLAYER 1 WON");
-            this.pointsPlayer1++;
-        }else if (this.player1 == "Seasor" && this.player2 == "Seasor"){
-            System.out.println("DRAW");
-            this.pointsPlayer2++;
             this.pointsPlayer1++;
         }else if (this.player1 == "Seasor" && this.player2 == "Rock"){
             System.out.println("PLAYER 2 WON");
